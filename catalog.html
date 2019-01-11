@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Каталог</title>
+</head>
+<body>
+	<header class="main-header">
+		<span class="header-logo"><a href="#">Device</a></span>
+		<form method="post" name="search">
+				<input type="text" placeholder="Поиск по сайту">
+			</form>
+			<nav class="header-user-nav">
+				<ul>
+					<li class="header-nav-item__login"><a href="#">Войти</a></li>
+					<li class="header-nav-item__compare"><a href="#">Сравнить</a></li>
+					<li class="header-nav-item__basket"><a href="#">Корзина</a></li>
+				</ul>
+		    </nav>
+		<p class="catalog">Каталог товаров</p>
+		<ul class="info-header">
+			<li class="info-item__delivery"><a href="#">Доставка</a></li>
+			<li class="info-item__warranty"><a href="#">Гарантия</a></li>
+			<li class="info-item__contacts"><a href="#">Контакты</a></li>
+		</ul>
+	</header>
+	<h3>Моноподы для селфи</h3>
+	<nav class="catalog-navigation">
+			<a href="#">Главная</a>
+			<a href="#">Каталог товаров</a>
+			<a href="#">Моноподы для селфи</a>
+	</nav>
+
+	<main>
+		<aside class="filters">
+			<span>Фильтр:</span>
+			<form action="post" class="product-filters">
+				<span class="cost">Стоимость</span>
+				<input type="range" min="0" max="8000" step="100" value="5000">
+				<span class="color">Цвет</span>
+				<input type="checkbox" id="color-filter__black" checked>
+				<label for="color-filter__black">Черный</label>
+				<input type="checkbox" id="color-filter__white">
+				<label for="color-filter__white">Белый</label>
+				<input type="checkbox" id="color-filter__blue" checked>
+				<label for="color-filter__blue">Синий</label>
+				<input type="checkbox" id="color-filter__red" checked>
+				<label for="color-filter__red">Красный</label>
+				<input type="checkbox" id="color-filter__pink">
+				<label for="color-filter__pink">Розовый</label>
+				<input type="radio" id="bluetooth__true" checked>
+				<label for="bluetooth__true">Есть</label>
+				<input type="radio" id="bluetooth__false">
+				<label for="bluetooth__false">Нет</label>
+				<button type="submit">Показать</button>
+			</form>
+		</aside>
+		<span>Сортировка</span>
+		<nav class="product-sorting-navigation">
+			<a href="#">По цене</a>
+			<a href="#">По типу</a>
+			<a href="#">По популярности</a>
+			<input type="radio">
+			<input type="radio">
+		</nav>
+		<article class="catalog-products">
+			<ul>
+				<li class="catalog-item"><a href="#"><img src="" alt="Первая селфи-палка">Любительская селфи-палка</a><span class="product-cost">500 руб.</span></li>
+				<li class="catalog-item"><a href="#"><img src="" alt="Вторая селфи-палка">Профессиональная селфи-палка</a><span class="product-cost">1 500 руб.</span></li>
+				<li class="catalog-item"><a href="#"><img src="" alt="Третья селфи-палка">Непотопляемая селфи-палка</a><span class="product-cost">2 500 руб.</span></li>
+				<li class="catalog-item"><a href="#"><img src="" alt="Четвертая селфи-палка">Селфи-палка «Следуй за мной»</a><span class="product-cost">4 900 руб.</span></li>
+			</ul>
+		</article>
+		<section class="pagination">
+			<span class="pagination-back">Назад</span>
+			<a href="#">1</a>
+			<a href="#">2</a>
+			<a href="#">3</a>
+			<span class="pagination-next">Вперед</span>
+		</section>
+	</main>
+		<footer class="main-footer">
+		<h3 class="footer-logo" alt="Лого">Device</h3>
+
+			<nav class="footer-user-nav">
+				<ul>
+					<li class="footer-nav-item__"><a href="">Войти</a></li>
+					<li class="footer-nav-item__"><a href="">Сравнить</a></li>
+					<li class="footer-nav-item__"><a href="">Корзина</a></li>
+				</ul>
+			</nav>
+
+			<p class="address">г. Москва, ул. Строителей, 15</p>
+			<nav class="info-header">
+				<ul>
+					<li class="info-item__delivery"><a href="">Доставка</a></li>
+					<li class="info-item__warranty"><a href="">Гарантия</a></li>
+					<li class="info-item__contacts"><a href="">Контакты</a></li>
+				</ul>
+			</nav>
+			<span class="telephone">Тел.: +7(495) 495-95-95</span>
+			<ul class="footer-social">
+				<li class="social__facebook"><a href="facebook.com">Facebook</a></li>
+				<li class="social__instagram"><a href="">Instagram</a></li>
+				<li class="social__twitter"><a href="">Twitter</a></li>
+			</ul>
+			<img src="img/htmlacademy-logo.png" alt="Логотип академии">
+	</footer>
+</body>
+</html>

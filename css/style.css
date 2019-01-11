@@ -1,0 +1,271 @@
+body {
+	font-family: "Gilroy", Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	width: 1160px;
+	margin: 0 auto;
+}
+
+ul, li, p, div, form, h3 {
+	margin: 0;
+	padding: 0;
+}
+
+a, li, .catalog {
+	font-size: 18px;
+	line-height: 24px;
+	text-decoration: none;
+	list-style: none;
+	color: #000000;
+	}
+
+a,
+.catalog {
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 47px;
+	line-height: 48px;
+}
+
+p,
+.service-info__description,
+.hit-product__description,
+.address,
+.telephone,
+.header-user-nav li a,
+.footer-user-nav li a {
+	font-size: 15px;
+	line-height: 30px;
+}
+
+.hit-product-info__data th {
+	font-size: 36px;
+	line-height: 48px;
+	font-weight: 400;
+}
+
+.hit-product-info__data--categories td {
+	font-size: 13px;
+	line-height: 20px;
+}
+
+.header-logo > a,
+.footer-logo {
+	font-size: 48px;
+	line-height: 48px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.catalog,
+.info-header,
+.hit-product__page-link,
+.more-info {
+	text-transform: uppercase;
+}
+
+input[placeholder*="Поиск"] {
+	background-color: transparent;
+	border: 0px;
+	font-size: 15px;
+	line-height: 30px;
+}
+
+.hit-product__page-link,
+.about-us,
+.catalog,
+.info-header a,
+.info-footer a,
+.service-info a {
+	letter-spacing: 2px;
+}
+
+.main-footer {
+	min-height: 323px;
+	background-color: #464646;
+}
+
+.footer-logo {
+	color: #ffc600;
+}
+
+.info-footer li a,
+.address,
+.telephone,
+.footer-user-nav li a {
+	color: #ffffff;
+}
+
+.header-user-nav li a,
+.footer-user-nav li a {
+	font-weight: normal;
+	line-height: 36px;
+}
+
+.delivery-companies {
+	font-weight: bold;
+}
+
+.main-header {
+	min-height: 300px;
+	background: url(../img/header-background.jpg);
+	margin-top: 40px;
+	position: relative;
+}
+
+.header-logo {
+	position: absolute;
+	top: -25px;
+}
+
+.catalog {
+	margin-top: 45px;
+}
+
+.header-content-container {
+	width: 1050px;
+	margin: 0 auto;
+}
+
+.header-nav-container,
+.header-catalog-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.header-user-nav ul,
+.info-header {
+	display: flex;
+	margin-top: 45px;
+}
+
+.header-user-nav li:nth-of-type(2) {
+	margin-left: 215px;
+}
+
+.header-user-nav li:last-child {
+	margin-left: 65px;
+}
+
+.header-nav-container form {
+	margin-top: 45px;
+}
+
+.info-header li:last-child {
+	padding-left: 105px;
+}
+
+.info-header li:nth-of-type(2) {
+	padding-left: 35px;
+}
+
+.slider {
+	min-height: 390px;
+	width: 485px;
+	float: right;
+	margin-right: 30px;
+	position: relative;
+	top: -30px;
+}
+
+.slider h3 {
+	margin-bottom: 35px;
+}
+
+.slider p {
+	margin-bottom: 50px;
+}
+
+.hit-product__page-link {
+	display: inline-block;
+	margin-bottom: 50px;
+	margin-left: 45px;
+	margin-right: 235px;
+}
+
+.product-categories {
+	clear: both;
+}
+
+.hit-product-info {
+	width: 435px;
+}
+
+.hit-product-info th {
+	display: inline-block;
+	padding-bottom: 20px;
+	padding-right: 75px;
+}
+
+.hit-product-info td {
+	display: inline-block;
+	padding-right: 75px;
+}
+
+.hit-product-info th:last-child,
+.hit-product-info td:last-child {
+	padding-right: 0;
+}
+
+.slider-one-pic {
+	position: relative;
+	top: -110px;
+	left: 90px;
+}
+
+.product-categories ul:first-child {
+	display: flex;
+	justify-content: space-between;
+}
+
+.product-categories ul:first-child li {
+	width: 160px;
+	height: 160px;
+	background-color: #f7e296;
+	text-align: center;
+	position: relative;
+}
+
+.product-categories img {
+	position: absolute;
+	margin: auto;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.product-categories ul:last-child {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 40px;
+}
+
+.product-categories ul:last-child li {
+	width: 160px;
+}
+
+.service-info {
+	min-height: 288px;
+	margin-top: 185px;
+	background-color: #e5e5e5;
+}
+
+.service-info__services--container {
+	width: 285px;
+	height: 320px;
+	margin: 0;
+	padding: 0;
+}
+
+.service-info__description--container {
+	width: 440px;
+    height: 160px;
+	}
+
+
