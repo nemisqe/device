@@ -14,7 +14,7 @@ ul, li, p, div, form, h3 {
 	padding: 0;
 }
 
-a, li, .catalog {
+a, ul:not(.delivery-companies) li, .catalog {
 	font-size: 18px;
 	line-height: 24px;
 	text-decoration: none;
@@ -23,7 +23,8 @@ a, li, .catalog {
 	}
 
 a,
-.catalog {
+.catalog,
+.delivery-companies {
 	font-weight: bold;
 }
 
@@ -38,9 +39,14 @@ p,
 .address,
 .telephone,
 .header-user-nav li a,
-.footer-user-nav li a {
+.footer-user-nav li a,
+.catalog-popup li a {
 	font-size: 15px;
 	line-height: 30px;
+}
+
+.catalog-popup li a {
+	font-weight: normal;
 }
 
 .hit-product-info__data th {
@@ -65,15 +71,33 @@ p,
 .catalog,
 .info-header,
 .hit-product__page-link,
-.more-info {
+.more-info,
+.service-info ul li,
+.info-footer ul a {
 	text-transform: uppercase;
 }
 
 input[placeholder*="Поиск"] {
+	display: inline-block;
 	background-color: transparent;
 	border: 0px;
 	font-size: 15px;
 	line-height: 30px;
+	margin-left: 30px;
+}
+
+.header-search {
+	background: url(../img/search-icon.png) no-repeat;
+	background-position: 0 7px;
+}
+
+.header-nav-container {
+	background: url(../img/header-nav-sprite.png) no-repeat;
+	background-position: 550px 55px;
+}
+
+.header-nav-item__login {
+	margin-right: 25px;
 }
 
 .hit-product__page-link,
@@ -107,13 +131,9 @@ input[placeholder*="Поиск"] {
 	line-height: 36px;
 }
 
-.delivery-companies {
-	font-weight: bold;
-}
-
 .main-header {
 	min-height: 300px;
-	background: url(../img/header-background.jpg);
+	background-color: #f7e296;
 	margin-top: 40px;
 	position: relative;
 }
@@ -125,11 +145,46 @@ input[placeholder*="Поиск"] {
 
 .catalog {
 	margin-top: 45px;
+	cursor: pointer;
+}
+
+.header-catalog-container {
+	background: url(../img/plus-icon.png) no-repeat 210px 48px;
+}
+
+.catalog-popup {
+	display: flex;
+	background-color: #f7e296;
+	position: relative;
+	z-index: 1000;
+}
+
+.catalog-popup li {
+	display: flex;
+	flex-direction: column;
+}
+
+.header-number {
+	color: #ffffff;
+	font-size: 179px;
+	line-height: 179px;
+	position: absolute;
+	font-weight: bold;
+	top: -100px;
+	left: 337px;
 }
 
 .header-content-container {
 	width: 1050px;
 	margin: 0 auto;
+}
+
+.line-decoration {
+	width: 100px;
+	position: absolute;
+	border-top: 8px solid white;
+	top: 220px;
+	left: 605px;
 }
 
 .header-nav-container,
@@ -156,12 +211,17 @@ input[placeholder*="Поиск"] {
 	margin-top: 45px;
 }
 
+.info-header {
+	margin-right: 37px;
+}
+
 .info-header li:last-child {
-	padding-left: 105px;
+	padding-left: 135px;
+	margin-right: -39px;
 }
 
 .info-header li:nth-of-type(2) {
-	padding-left: 35px;
+	padding-left: 45px;
 }
 
 .slider {
@@ -171,10 +231,12 @@ input[placeholder*="Поиск"] {
 	margin-right: 30px;
 	position: relative;
 	top: -30px;
+	margin-right: 75px;
 }
 
 .slider h3 {
 	margin-bottom: 35px;
+	position: relative;
 }
 
 .slider p {
@@ -216,6 +278,7 @@ input[placeholder*="Поиск"] {
 	position: relative;
 	top: -110px;
 	left: 90px;
+	z-index: 1;
 }
 
 .product-categories ul:first-child {
@@ -240,32 +303,126 @@ input[placeholder*="Поиск"] {
 	right: 0;
 }
 
-.product-categories ul:last-child {
-	display: flex;
-	justify-content: space-between;
-	padding-top: 40px;
+.product-categories a {
+	display: inline-block;
+	width: 160px;
+	margin-top: 190px;
+	text-align: left;
 }
 
-.product-categories ul:last-child li {
-	width: 160px;
+.product-categories li {
+	margin-bottom: 180px;
 }
 
 .service-info {
 	min-height: 288px;
-	margin-top: 185px;
-	background-color: #e5e5e5;
+	position: relative;
+	margin-bottom: 105px;
+	background: #e5e5e5;
+}
+
+.service-info-container {
+	display: flex;
 }
 
 .service-info__services--container {
-	width: 285px;
-	height: 320px;
-	margin: 0;
-	padding: 0;
+	position: absolute;
+	top: -13px;
 }
 
 .service-info__description--container {
-	width: 440px;
-    height: 160px;
-	}
+	position: absolute;
+	width: 435px;
+	left: 540px;
+	top: -30px;
+}
 
+.service-info h3 {
+	padding-bottom: 40px;
+}
 
+.banners {
+	margin-bottom: 105px;
+}
+
+.features {
+	min-height: 565px;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 85px;
+}
+
+.about-us__container {
+	width: 500px;
+}
+
+.contacts__container {
+	width: 565px;
+}
+
+.features h3 {
+	padding-bottom: 55px;
+	padding-top: 50px;
+}
+
+.features p:first-of-type {
+	padding-bottom: 40px;
+}
+
+.features p:nth-of-type(2) {
+	padding-bottom: 80px;
+}
+
+.delivery-companies {
+	padding-left: 15px;
+	padding-bottom: 80px;
+}
+
+.features img {
+	padding-bottom: 47px;
+}
+
+.logo-login__container,
+.address-info-tel__container,
+.social-logo__container {
+	padding-top: 65px;
+}
+
+.logo-login__container,
+.footer-user-nav ul,
+.address-info-tel__container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer-user-nav ul li {
+	padding-right: 60px;
+}
+
+.footer-user-nav ul li:last-child {
+	padding-right: 0;
+}
+
+.info-footer ul,
+.footer-social {
+	display: flex;
+}
+
+.social-logo__container {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.footer-social {
+	padding-right: 390px;
+}
+
+.info-footer li,
+.footer-social li {
+	padding-right: 35px;
+}
+
+.info-footer li:last-child,
+.footer-social li:last-child {
+	padding-right: 0;
+}
