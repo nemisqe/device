@@ -9,6 +9,10 @@ body {
 	margin: 0 auto;
 }
 
+.hidden {
+	display: none;
+}
+
 ul, li, p, div, form, h3 {
 	margin: 0;
 	padding: 0;
@@ -21,6 +25,13 @@ a, ul:not(.delivery-companies) li, .catalog {
 	list-style: none;
 	color: #000000;
 	}
+
+.catalog-popup li a {
+	font-size: 15px;
+	line-height: 36px;
+	text-transform: none;
+	letter-spacing: normal;
+}
 
 a,
 .catalog,
@@ -39,8 +50,7 @@ p,
 .address,
 .telephone,
 .header-user-nav li a,
-.footer-user-nav li a,
-.catalog-popup li a {
+.footer-user-nav li a {
 	font-size: 15px;
 	line-height: 30px;
 }
@@ -82,18 +92,38 @@ input[placeholder*="Поиск"] {
 	background-color: transparent;
 	border: 0px;
 	font-size: 15px;
+	padding-left: 30px;
 	line-height: 30px;
-	margin-left: 30px;
-}
-
-.header-search {
 	background: url(../img/search-icon.png) no-repeat;
 	background-position: 0 7px;
+	outline: none;
 }
 
-.header-nav-container {
-	background: url(../img/header-nav-sprite.png) no-repeat;
-	background-position: 550px 55px;
+.header-search input:nth-child(1):focus {
+	border-bottom: 2px solid black;
+}
+
+input[value*="Найти"] {
+	width: 80px;
+	height: 35px;
+	background-color: transparent;
+	border: none;
+	color: #000;
+	border: 1px solid #000;
+	cursor: pointer;
+	box-sizing: border-box;
+	padding-right: 10px;
+}
+
+input[value*="Найти"]:hover {
+	color: #fff;
+	background-color: #000;
+}
+
+.header-search input:nth-child(1):hover,
+.header-user-nav li:hover,
+input[value*="Найти"]:active {
+	opacity: 0.6;
 }
 
 .header-nav-item__login {
@@ -143,6 +173,43 @@ input[placeholder*="Поиск"] {
 	top: -25px;
 }
 
+.header-logo:hover,
+.footer-logo:hover,
+a:not(.product-categories-item):hover,
+.catalog:hover span {
+	opacity: 0.7;
+}
+
+.banners a:hover {
+	opacity: 1;
+}
+
+.banners a:first-child img:hover {
+	background: url(../img/logo-1-hover.png);
+}
+
+.banners a:nth-child(2) img:hover {
+	background: url(../img/logo-2-hover.png);
+}
+
+.banners a:nth-child(3) img:hover {
+	background: url(../img/logo-3-hover.png);
+}
+
+.banners a:last-child img:hover {
+	background: url(../img/logo-4-hover.png);
+}
+
+.product-categories-item:hover {}
+
+.header-logo:active,
+.footer-logo:active,
+a:active,
+.header-user-nav ul li:active,
+.hit-product-container:active {
+	opacity: 0.5;
+}
+
 .catalog {
 	margin-top: 45px;
 	cursor: pointer;
@@ -153,15 +220,27 @@ input[placeholder*="Поиск"] {
 }
 
 .catalog-popup {
-	display: flex;
+	display: none;
+	width: 1105px;
+	min-height: 130px;
+	padding-top: 20px;
 	background-color: #f7e296;
-	position: relative;
+	position: absolute;
 	z-index: 1000;
 }
 
 .catalog-popup li {
 	display: flex;
 	flex-direction: column;
+}
+
+.catalog-popup li:nth-child(2) {
+	margin-left: 60px;
+	margin-right: 60px;
+}
+
+.catalog-menu:hover .catalog-popup {
+    display: flex;
 }
 
 .header-number {
@@ -171,7 +250,7 @@ input[placeholder*="Поиск"] {
 	position: absolute;
 	font-weight: bold;
 	top: -100px;
-	left: 337px;
+	left: 937px;
 }
 
 .header-content-container {
@@ -184,7 +263,7 @@ input[placeholder*="Поиск"] {
 	position: absolute;
 	border-top: 8px solid white;
 	top: 220px;
-	left: 605px;
+	left: 570px;
 }
 
 .header-nav-container,
@@ -199,12 +278,23 @@ input[placeholder*="Поиск"] {
 	margin-top: 45px;
 }
 
+.header-user-nav li a {
+	display: inline-block;
+	padding-left: 20px;
+}
+
+.header-user-nav li {
+	background: url(../img/header-nav-sprite.png) no-repeat 0 10px;
+}
+
 .header-user-nav li:nth-of-type(2) {
 	margin-left: 215px;
+	background-position: -285px 10px;
 }
 
 .header-user-nav li:last-child {
 	margin-left: 65px;
+	background-position: -415px 10px;
 }
 
 .header-nav-container form {
@@ -212,26 +302,35 @@ input[placeholder*="Поиск"] {
 }
 
 .info-header {
-	margin-right: 37px;
+	margin-right: 72px;
 }
 
 .info-header li:last-child {
 	padding-left: 135px;
-	margin-right: -39px;
+	margin-right: -75px;
 }
 
 .info-header li:nth-of-type(2) {
-	padding-left: 45px;
+	padding-left: 80px;
 }
 
 .slider {
+	display: flex;
 	min-height: 390px;
 	width: 485px;
-	float: right;
 	margin-right: 30px;
 	position: relative;
 	top: -30px;
-	margin-right: 75px;
+	margin-right: 105px;
+}
+
+.toggle-list,
+.toggles-list-container {
+	display: flex;
+}
+
+.slider > div {
+	margin-left: 180px;
 }
 
 .slider h3 {
@@ -243,15 +342,14 @@ input[placeholder*="Поиск"] {
 	margin-bottom: 50px;
 }
 
-.hit-product__page-link {
+.button {
 	display: inline-block;
-	margin-bottom: 50px;
-	margin-left: 45px;
-	margin-right: 235px;
-}
-
-.product-categories {
-	clear: both;
+	width: 220px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background-color: #f0c52e;
+	margin-bottom: 20px;
 }
 
 .hit-product-info {
@@ -276,22 +374,33 @@ input[placeholder*="Поиск"] {
 
 .slider-one-pic {
 	position: relative;
-	top: -110px;
+	top: -80px;
 	left: 90px;
 	z-index: 1;
 }
 
-.product-categories ul:first-child {
+.product-categories > .container {
 	display: flex;
 	justify-content: space-between;
 }
 
-.product-categories ul:first-child li {
+.product-categories {
+	margin-bottom: 170px;
+}
+
+.product-categories .product-categories__img-container {
 	width: 160px;
 	height: 160px;
 	background-color: #f7e296;
-	text-align: center;
+}
+
+.product-categories__img-container {
 	position: relative;
+	margin-bottom: 35px;
+}
+
+.product-categories-item:hover .product-categories__img-container {
+	background-color: #f0c52e;
 }
 
 .product-categories img {
@@ -303,22 +412,20 @@ input[placeholder*="Поиск"] {
 	right: 0;
 }
 
-.product-categories a {
-	display: inline-block;
-	width: 160px;
-	margin-top: 190px;
-	text-align: left;
-}
-
-.product-categories li {
-	margin-bottom: 180px;
-}
-
 .service-info {
 	min-height: 288px;
 	position: relative;
 	margin-bottom: 105px;
 	background: #e5e5e5;
+}
+
+.line-decoration__service-info {
+	position: absolute;
+	height: 320px;
+	width: 10px;
+	background-color: #000;
+	left: 434px;
+	bottom: 70px;
 }
 
 .service-info-container {
@@ -353,6 +460,7 @@ input[placeholder*="Поиск"] {
 }
 
 .about-us__container {
+	position: relative;
 	width: 500px;
 }
 
@@ -378,8 +486,15 @@ input[placeholder*="Поиск"] {
 	padding-bottom: 80px;
 }
 
+.features__line-decoration {
+	position: absolute;
+	background-color: #000;
+	height: 10px;
+	width: 80px;
+}
+
 .features img {
-	padding-bottom: 47px;
+	margin-bottom: 54px;
 }
 
 .logo-login__container,
@@ -414,7 +529,31 @@ input[placeholder*="Поиск"] {
 }
 
 .footer-social {
-	padding-right: 390px;
+	padding-right: 450px;
+}
+
+.footer-social a {
+	background: url(../img/social-icons-sprite.png) no-repeat;
+	display: block;
+	width: 32px;
+	height: 32px;
+	opacity: 0.5;
+}
+
+.footer-social li:nth-child(2) a {
+	background-position: -55px 0;
+}
+
+.footer-social li:last-child a {
+	background-position: -109px 0;
+}
+
+.footer-social li a:hover {
+	opacity: 1;
+}
+
+.footer-social li a:active {
+	opacity: 0.3;
 }
 
 .info-footer li,
@@ -425,4 +564,29 @@ input[placeholder*="Поиск"] {
 .info-footer li:last-child,
 .footer-social li:last-child {
 	padding-right: 0;
+}
+
+.big-map {
+	position: absolute;
+    left: 70px;
+    top: 40px;
+}
+
+.small-map {
+	cursor: pointer;
+}
+
+.exit-button {
+	position: absolute;
+	display: block;
+	height: 55px;
+	width: 55px;
+	top: 25px;
+	left: 910px;
+	cursor: pointer;
+	background: url(../img/modal-close.png) no-repeat;
+}
+
+.exit-button:hover {
+	opacity: 0.8;
 }

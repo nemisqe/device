@@ -13,7 +13,8 @@
 		<span class="header-logo"><a href="#">Device</a></span>
 		<div class="header-nav-container">
 		<form method="post" name="search" class="header-search">
-				<input type="text" placeholder="Поиск по сайту">
+				<input type="text" id="search-input" placeholder="Поиск по сайту">
+				<input type="submit" name="search-button" class="search-button hidden" value="Найти">
 			</form>
 			<nav class="header-user-nav">
 				<ul>
@@ -25,20 +26,23 @@
 		    </div>
 		    <div class="header-catalog-container">
 		<div>
-			<p class="catalog">Каталог товаров</p>
-			<ul class="catalog-popup">
-				<li>
-					<a href="#">Виртуальная реальность</a>
-					<a href="#">Моноподы для селфи</a>
-					<a href="#">Экшн-камеры</a>
-				</li>
-				<li>
-					<a href="#">Фитнес-браслеты</a>
-					<a href="#">Умные часы</a>
-				</li>
-				<li>
-					<a href="#">Квадрокоптеры</a>
-				</li>
+			<ul class="catalog-menu">
+				<li class="catalog"><span>Каталог товаров</span>
+					<ul class="catalog-popup">
+						<li>
+							<a href="#">Виртуальная реальность</a>
+							<a href="#">Моноподы для селфи</a>
+							<a href="#">Экшн-камеры</a>
+						</li>
+						<li>
+							<a href="#">Фитнес-браслеты</a>
+							<a href="#">Умные часы</a>
+						</li>
+						<li>
+							<a href="#">Квадрокоптеры</a>
+						</li>
+				</ul>
+			</li>
 			</ul>
 		</div>
 		<ul class="info-header">
@@ -51,15 +55,29 @@
 	</header>
 	</div>
 	<div class="container">
+		<article class="slider">
 		<img src="img/slider-1.png" width="384" height="486" alt="Селфи-моноподы" class="slider-one-pic">
-			<article class="slider">
+		<div>
 				<h3>Делай селфи, <br> как Бен Стиллер!</h3>
 				<span class="header-number">01</span>
 				<p class="hit-product__description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм</p>
-				<a href="#" class="hit-product__page-link">Подробнее</a>
-				<input type="radio" class="slider-toggle">
-				<input type="radio" class="slider-toggle">
-				<input type="radio" class="slider-toggle">
+				<div class="toggles-list-container">
+
+					<a href="#" class="hit-product__page-link button">Подробнее</a>
+
+
+				<ul class="toggle-list">
+		            <li class="toggle-list-item">
+		              <input type="radio" name="list-item" value="item-1">
+		            </li>
+		            <li class="toggle-list-item">
+		              <input type="radio" name="list-item" value="item-2">
+		            </li>
+		            <li class="toggle-list-item">
+		              <input type="radio" name="list-item" value="item-3">
+		            </li>
+          		</ul>
+          		</div>
 				<table class="hit-product-info">
 					<tr class="hit-product-info__data">
 						<th>8,5 м</th>
@@ -72,31 +90,49 @@
 						<td>Материал</td>
 					</tr>
 				</table>
+				</div>
 			</article>
 	</div>
 
 	<main>
 		<section class="product-categories">
 			<div class="container">
-			<ul>
-				<li class="product-pic"><img src="img/vr-icon.png" alt="VR-очки"><a>Виртуальная реальность</a></li>
-				<li class="product-pic"><img src="img/selfie-stick-icon.png" alt="Селфи-моноподы"><a href="#">Моноподы для селфи</a></li>
-				<li class="product-pic"><img src="img/camera-icon.png" alt="Камеры"><a href="#">Экшн-камеры</a></li>
-				<li class="product-pic"><img src="img/fitness-braclet-icon.png" alt="Фитнес-браслеты"><a href="#">Фитнес-браслеты</a></li>
-				<li class="product-pic"><img src="img/watches-icon.png" alt="Смарт-часы"><a href="#">Умные часы</a></li>
-				<li class="product-pic"><img src="img/quadrocopter-icon.png" alt="Квадрокоптеры"><a href="#">Квадрокоптеры</a></li>
-			</ul>
+				<a href="#" class="product-categories-item">
+					<div class="product-categories__img-container"><img src="img/vr-icon.png" alt="VR"></div>
+					Виртуальная <br> реальность
+				</a>
+				<a href="#" class="product-categories-item">
+					<div class="product-categories__img-container"><img src="img/selfie-stick-icon.png" alt="Селфи-моноподы"></div>
+					Моноподы <br> для селфи
+				</a>
+				<a href="#" class="product-categories-item">
+					<div class="product-categories__img-container"><img src="img/camera-icon.png" alt="Экшн-камеры"></div>
+					Экшн-камеры
+				</a>
+				<a href="#" class="product-categories-item">
+					<div class="product-categories__img-container"><img src="img/fitness-braclet-icon.png" alt="Фитнес-браслеты"></div>
+					Фитнес-браслеты
+				</a>
+				<a href="#" class="product-categories-item">
+					<div class="product-categories__img-container"><img src="img/watches-icon.png" alt="Умные часы"></div>
+					Умные часы
+				</a>
+				<a href="#" class="product-categories-item">
+					<div class="product-categories__img-container"><img src="img/quadrocopter-icon.png" alt="Квадрокоптеры"></div>
+					Квадрокоптеры
+				</a>
 			</div>
 		</section>
 
 		<section class="service-info">
 			<div class="container">
+				<div class="line-decoration__service-info"></div>
 				<div class="service-info-container">
 				<div class="service-info__services--container">
 					<ul>
-						<li class="service-info__delivery"><a href="#">Доставка</a></li>
-						<li class="service-info__warranty"><a href="#">Гарантия</a></li>
-						<li class="service-info__credit"><a href="#">Кредит</a></li>
+						<li class="service-info__delivery"><a class="button" href="#">Доставка</a></li>
+						<li class="service-info__warranty"><a class="button" href="#">Гарантия</a></li>
+						<li class="service-info__credit"><a class="button" href="#">Кредит</a></li>
 					</ul>
 				</div>
 				<div class="service-info__description--container">
@@ -111,15 +147,20 @@
 
 		<article class="banners">
 			<div class="container">
-			<a href=""><img src="img/logo-1.png" alt="Первый логотип"></a>
-			<a href=""><img src="img/logo-2.png" alt="Второй логотип"></a>
-			<a href=""><img src="img/logo-3.png" alt="Третий логотип"></a>
-			<a href=""><img src="img/logo-4.png" alt="Четвертый логотип"></a>
+				<a href=""><img src="img/logo-1.png" alt="Первый логотип"></a>
+				<a href=""><img src="img/logo-2.png" alt="Второй логотип"></a>
+				<a href=""><img src="img/logo-3.png" alt="Третий логотип"></a>
+				<a href=""><img src="img/logo-4.png" alt="Четвертый логотип"></a>
 			</div>
 		</article>
 
 		<section class="features container">
 			<div class="about-us__container">
+				<div class="features__line-decoration"></div>
+				<div class="big-map hidden">
+					<span class="exit-button"></span>
+					<img src="img/map-big.png" alt="Большая карта">
+				</div>
 				<h3>О нас</h3>
 				<p>
 					Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
@@ -132,22 +173,23 @@
 					<li>Автотрейдинг</li>
 					<li>ЖелДорЭкспедиция</li>
 				</ul>
-			<a href="#" class="more-info about-us">Подробнее о нас</a>
+			<a href="#" class="more-info about-us button">Подробнее о нас</a>
 			</div>
 			<div class="contacts__container">
-			<h3>Контакты</h3>
-			<p>
-				Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность по80pxкупки. Всякое бывает.
-			</p>
-			<img src="img/map.png" alt="Карта"><br>
-		  <a href="#" class="more-info dm">Напишите нам</a>
+				<div class="features__line-decoration"></div>
+				<h3>Контакты</h3>
+				<p>
+					Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
+				</p>
+				<img class="small-map" src="img/map.png" alt="Карта"><br>
+				<a href="#" class="more-info dm button">Напишите нам</a>
 		  </div>
 		</section>
 	</main>
 	<footer class="main-footer">
 		<div class="container">
 			<div class="logo-login__container">
-				<span class="footer-logo">Device</span>
+				<a href="#" class="footer-logo">Device</a>
 
 					<nav class="footer-user-nav">
 						<ul>
@@ -170,13 +212,14 @@
 			</div>
 			<div class="social-logo__container">
 				<ul class="footer-social">
-					<li class="social__facebook"><a href="facebook.com">Facebook</a></li>
-					<li class="social__instagram"><a href="">Instagram</a></li>
-					<li class="social__twitter"><a href="">Twitter</a></li>
+					<li class="social__facebook"><a href="facebook.com"></a></li>
+					<li class="social__instagram"><a href=""></a></li>
+					<li class="social__twitter"><a href=""></a></li>
 				</ul>
 				<img src="img/academy-logo.png" alt="Логотип академии">
 				</div>
 			</div>
 	</footer>
+	<script src="js/show-big-map.js"></script>
 </body>
 </html>
